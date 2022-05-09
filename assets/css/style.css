@@ -47,12 +47,12 @@
     padding: 20px;
 }
 
-.cor-html a, a:active {
+.cor-html{
     color: #ec6231;
     font-weight: bold;
 }
 
-.cor-css a, a:active {
+.cor-css{
     color: #0074be;
     font-weight: bold;
 }
