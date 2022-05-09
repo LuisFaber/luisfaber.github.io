@@ -1,4 +1,4 @@
-/*Formatação Menu*/
+
 * {
     margin: 0;
     padding: 0;
@@ -9,20 +9,35 @@
     text-decoration: none;
 }
 
-body {
-    max-height: 100vh;
-    max-width: 100vw;
-    overflow: hidden;
+*::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar {
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #444444;
+}
+
+.content {
+    scroll-behavior: smooth !important;
 }
 
 .container {
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+    display: flex;
     height: 100vh;
     width: 100vw;
-    display: flex;
 }
 
 .side-menu {
-    width: 200px;
+    width: 260px;
     height: 100%;
     background-color: rgb(26, 26, 26);
     display: flex;
@@ -32,23 +47,102 @@ body {
     padding: 20px;
 }
 
+.cor-html a, a:active {
+    color: #ec6231;
+    font-weight: bold;
+}
 
+.cor-css a, a:active {
+    color: #0074be;
+    font-weight: bold;
+}
 
-.foto {
+.photo {
     border: solid 5px rgb(100, 100, 100);
     height: 160px;
     width: 160px;
     border-radius: 80px;
-    background-image: url(assets/images/eu.jpg);
+    background-image: url("/assets/images/eu.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 }
 
-.foto img {
+.photo img {
     border-radius: 100%;
     border: 3px solid whitesmoke;
     margin-bottom: 20px;
+}
+.caixa-menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+    text-shadow: black;
+
+}
+.name {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    font-weight: 800;
+}
+.menu ul {
+    list-style: none;
+
+}
+.menu ul a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    line-height: 0.1em;
+    text-align: center;
+    font-weight: 400;
+    transition: all .5s;
+}
+.menu ul a:hover {
+    color: #20c997;
+
+}
+.icon {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.icon div a {
+    font-size: 1.4em;
+    color: #ffffff80;
+    cursor: pointer;
+    transition: color .5s;
+
+}
+.facebook a:hover {
+    color: #3b5998;
+}
+.twitter a:hover {
+    color: #00acee;
+}
+.linkedin a:hover {
+    color: #0e76a8;
+}
+
+.github a:hover {
+    width: 22.0px;
+    height: 21.7px;
+    color:  rgb(211, 211, 211);
+    border-radius: 100%;
+}
+.button-menu button{
+    cursor: pointer;
 }
 
 .content {
@@ -60,7 +154,7 @@ body {
 
 .home {
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.657), rgba(0, 0, 0, 0.657)), url("assets/images/fundo10.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.657), rgba(0, 0, 0, 0.657)), url("/assets/images/fundo10.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
@@ -69,17 +163,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-
-.caixa-menu {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    flex-direction: column;
-    text-shadow: black;
-
-}
-
 .texto-welcome {
     text-align: center;
     font-size: 2em;
@@ -87,84 +170,24 @@ body {
     font-weight: bold;
 }
 
-.texto-nome {
-    font-size: 3em;
-    color: white;
-    font-weight: bold;
+.text-type-container {
+    height: 68px;
+    font-weight: 800;
 }
 
+.texto-name {
+    font-size: 2em;
+    color: white;
+    font-weight: 800;
+}
 .texto-endereco {
     text-align: center;
     font-size: 1em;
     color: white;
 
 }
-
-.nome {
-    font-size: 1.2em;
-    text-decoration: none;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    display: block;
-    margin-top: 10px;
-}
-
-.menu ul {
-    list-style: none;
-
-}
-
-.menu ul a {
-    color: white;
-    font-size: 0.8em;
-    text-decoration: none;
-    padding: 15px;
-    display: block;
-    line-height: 0.1em;
-    text-align: center;
-}
-
-.menu ul a:hover {
-    color: rgb(69, 69, 139);
-    padding-right: 4px;
-
-}
-
-.icon {
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-}
-
-.icon div a {
-    font-size: 1.4em;
-    color: #ffffff80;
-    cursor: pointer;
-
-}
-
-.facebook a:hover {
-    color: #3b5998;
-}
-
-.twitter a:hover {
-    color: #00acee;
-}
-
-.linkedin a:hover {
-    color: #0e76a8;
-}
-
-.github a:hover {
-    color: #171515;
-}
-.button-menu button{
-    cursor: pointer;
-}
-
+/* 
+---------------------- Formatações PAGINA 2 */
 .about-me {
     background-color: #212529;
     height: 100vh;
@@ -179,14 +202,12 @@ body {
      alinha horizontalmente
 */
 }
-
 .about-title {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .titulo-2 {
     text-transform: uppercase;
     opacity: 0.1;
@@ -196,7 +217,6 @@ body {
     font-weight: bold;
     letter-spacing: 5px;
 }
-
 .about-know {
     position: absolute;
     color: white;
@@ -205,80 +225,64 @@ body {
     font-size: 1.8em;
     font-weight: bold;
 }
-
 .about-text {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.sobre-mim {
-    padding: 40px;
+    width: 90%;
+    height: 60%;
 }
 
 .texto-titulo-pessoal {
-    font-size: 1.9em;
+    font-size: 1.6em;
     color: #ffffff;
     font-weight: bold;
 }
-
 .texto-titulo-pessoal span {
-    font-weight: 400;
+    color: #20c997;
+    font-weight: bold;
 }
-
 .about-text p {
     text-align: center left;
-    font-size: 0.8em;
+    font-size: 0.9em;
     color: #ffffff80;
     padding-top: 20px;
     max-width: 500px;
 }
-
-
-.nome111 {
+.name111 {
     color: blanchedalmond;
     font-size: 1.6em;
 }
-
 .tabela {
     width: auto;
     text-align: left;
-    margin-left: 100px;
+    
 
 }
-
 .tabela ul {
     list-style: none;
     font-weight: bold;
     color: #ffffff80;
     padding: 10px;
 }
-
 .tabela a {
     font-weight: bold;
     color: #ffffff80;
 }
-
 .tabela span {
     font-weight: bold;
     color: #Deede4;
 
 }
-
 .tabela li {
     padding-top: 17px;
-    border-bottom: 1px solid rgba(250, 250, 250, 0.12);
+    border-bottom: 2px solid rgba(250, 250, 250, 0.12);
 }
-
 li.sem-borda {
     border: none;
 }
-
-/*
-PARTE 3
-*/
+/* 
+---------------------- Formatações PAGINA 3 */
 .what-i-do {
     background-color: #343a40;
     height: 80vh;
@@ -287,14 +291,12 @@ PARTE 3
     align-items: center;
     justify-content: center;
 }
-
 .what-title {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .titulo-service {
     text-transform: uppercase;
     opacity: 0.2;
@@ -305,6 +307,24 @@ PARTE 3
     letter-spacing: 5px;
 }
 
+.button-menu {
+    background: transparent;
+    color: #d0d0d0;
+    border: solid 2px grey;
+    padding: 2px 4px;
+    border-radius: 10px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.button-menu:hover {
+    background: white;
+    border-color: white;
+    color: black;
+}
+
 .titulo-what {
     position: absolute;
     color: white;
@@ -313,7 +333,6 @@ PARTE 3
     font-size: 1.8em;
     font-weight: bold;
 }
-
 .tabelas-what {
     width: 80%;
     max-width: 80%;
@@ -324,9 +343,7 @@ PARTE 3
     align-items: center;
 
 }
-
 .tabela1 {
-    width: 100px;
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -337,25 +354,31 @@ PARTE 3
     cursor: pointer;
 }
 
+
+.tabela1 a, a:active{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 .tabela1:hover {
     transform: translateY(-20px) scale(1.5);
 }
-
 .tabela1 img {
     height: 60px;
     width: max-content;
     margin-bottom: 6px;
 
 }
-
 .tabela1 span {
     font-weight: bold;
     color: #ffffff80;
     letter-spacing: 2px;
+    text-align: center;
 }
-
-/* PARTE 4 -----------------------
-*/
+/* 
+---------------------- Formatações PAGINA 4 */
 .sumary {
     background-color: #212529;
     height: 100vh;
@@ -365,16 +388,12 @@ PARTE 3
     justify-content: center;
 
 }
-
-
-
 .sumary-tittle {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .sumary-tittle2 {
     text-transform: uppercase;
     opacity: 0.1;
@@ -384,8 +403,6 @@ PARTE 3
     font-weight: bold;
     letter-spacing: 5px;
 }
-
-
 .sumary-tittle3 {
     position: absolute;
     color: white;
@@ -394,10 +411,6 @@ PARTE 3
     font-size: 1.8em;
     font-weight: bold;
 }
-
-/*
-CONTAINER SUMARY -------------------------------*/
-
 .container-sumary {
     display: flex;
     width: 100%;
@@ -405,13 +418,11 @@ CONTAINER SUMARY -------------------------------*/
     height: 400px;
     flex-direction: row;
 }
-
 .subtitulo {
     text-align: left;
     font-weight: bold;
     color: white;
 }
-
 .container-sumary-1 {
     width: 40%;
     height: 100%;
@@ -419,19 +430,17 @@ CONTAINER SUMARY -------------------------------*/
     flex-direction: column;
     justify-content: space-between;
 }
-
 .box1 {
     width: 100%;
-    height: 40%;
     max-width: 100%;
     padding: 13px;
     font-weight: bold;
     color: white;
     background: #111418;
     font-size: 0.8em;
+    margin-bottom: 20px;
 
 }
-
 .container-sumary-2 {
 
     width: 40%;
@@ -453,7 +462,6 @@ span {
     font-weight: bold;
 }
 
-
 .red {
     display: inline-block;
     padding: 4px 2px;
@@ -464,7 +472,6 @@ span {
     line-height: 1;
     margin-bottom: 4px;
 }
-
 .spu {
     color: #20c997;
     padding-bottom: 1px;
@@ -472,6 +479,59 @@ span {
     font-size: 0.9em;
 
 }
+
+.portfolio{
+    background-color: #343a40;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.projects{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 70%;
+    justify-content: space-around;
+    align-items: left
+    ;
+}
+.portfolio h2{
+    font-weight: bold;
+    color: #Deede4;
+    text-transform: uppercase;
+    text-align: left;
+}
+.projects-images{
+    display: flex;
+    justify-content: space-around;
+    height: 43%;
+    width: 100%;
+}
+.pro-image{
+    background-image: url("/assets/images/projeto-museu-nacional.png");
+    height: 100%;
+    width: 40%;
+    background-size: cover;
+    border: 5px solid white;
+}
+.pro-text{
+    height: 100%;
+    width: 50%;
+    font-weight: 500;
+    color: #ffffff80;
+    font-size: 1rem;
+    text-align: left;
+}
+.pro-image2{
+    background-image: url("/assets/images/projeto-noticias-cidade.png");
+    height: 100%;
+    width: 40%;
+    background-size: cover;
+     border: 5px solid white;
+}
+
 
 /*
 ----------------------- footer
@@ -485,19 +545,15 @@ span {
     justify-content: center;
     border-top: 1px solid #505050;
 }
-
 .fot {
     color: #20c997;
     padding-bottom: 1px;
     font-weight: bold;
 }
-
 .p1 {
     font-weight: bold;
     color: white;
 }
-
-
 .tablet {
     display: none;
 }
@@ -517,21 +573,19 @@ span {
     display: block;
     color: white;
     font-weight: bold;
+    transition: all .7s;
 }
 .aside-content-tablet ul li a:hover{
     background: white;
     color: rgb(26, 26, 26);
 
 }
-
 .estilo-novo {
     max-height: max-content;
 }
-
 .icon-tablet {
     display: none;
 }
-
 @media(max-width: 768px) {
     .container {
         display: block;
@@ -552,11 +606,11 @@ span {
         padding: 0;
     }
 
-    .foto {
+    .photo {
         display: none;
     }
 
-    .area-superior {
+    .upside-content {
         display: none;
     }
 
@@ -603,5 +657,41 @@ span {
     }
     .fot {
         padding-bottom: 100px;
+    }
+}
+
+@media(max-width: 480px) {
+
+    .text-type-container {
+        height: 40px;
+    }
+
+    .texto-name {
+        font-size: 30px;
+    }
+
+    .about-me {
+        height: max-content;
+        padding: 40px 0;
+    }
+
+    .about-text {
+        flex-direction: column;
+    }
+
+    .tabela {
+        width: 100%;
+    }
+
+    .sumary {
+        height: max-content;
+    }
+
+    .container-sumary {
+        height: max-content;
+    }
+
+    .titulo-service {
+        font-size: 60px;
     }
 }
